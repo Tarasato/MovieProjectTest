@@ -197,20 +197,20 @@ INNER JOIN movie_type_tb t ON m.movieTypeId = t.movieTypeId";
                 dgvMovieShowAll.Columns[4].Width = 80;
 
                 // เพิ่มข้อมูลลงใน ListView
-                foreach (DataRow row in dt.Rows)
-                {
-                    ListViewItem item = new ListViewItem(row["movieId"].ToString());
-                    item.SubItems.Add(row["movieName"].ToString());
+                // foreach (DataRow row in dt.Rows)
+                // {
+                //     ListViewItem item = new ListViewItem(row["movieId"].ToString());
+                //     item.SubItems.Add(row["movieName"].ToString());
 
-                    // แปลงวันที่เป็นภาษาไทย
-                    DateTime movieDateSale = Convert.ToDateTime(row["movieDateSale"]);
-                    string movieDateSaleThai = movieDateSale.ToString("dd MMM yyyy", thaiCulture);
-                    item.SubItems.Add(movieDateSaleThai); // แสดงวันที่เป็นภาษาไทยใน ListView
+                //     // แปลงวันที่เป็นภาษาไทย
+                //     DateTime movieDateSale = Convert.ToDateTime(row["movieDateSale"]);
+                //     string movieDateSaleThai = movieDateSale.ToString("dd MMM yyyy", thaiCulture);
+                //     item.SubItems.Add(movieDateSaleThai); // แสดงวันที่เป็นภาษาไทยใน ListView
 
-                    // เพิ่ม item เข้าไปใน ListView
-                    lsMovieShow.Items.Add(item);
+                //     // เพิ่ม item เข้าไปใน ListView
+                //     lsMovieShow.Items.Add(item);
 
-                }
+                // }
             }
 
             dgvMovieShowAll.ClearSelection(); // ยกเลิกการเลือกใน DataGridView
